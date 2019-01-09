@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome let build a Weather application</title>
+    <link rel="stylesheet" href="/css/weather.css" />
+</head>
+
+<body>
+    <h1>Weather 1025 </h1>
+    <form action='' method='post'>
+        <input type="text" name="city" placeholder='Enter city...' class="weather-text" required>
+        <button type="submit" name="get weather" class="weather-btn">Get Weather</button>
+    </form>
+    <% if(error !== null ) { %>
+    <p class="error">
+        <%= error %>
+    </p>
+    <% } %>
+    <div class="weather-container">
+        <% if(weather) { %>
+        <h3>
+            Your Temperature at
+            <%= city %>
+        </h3>
+        <div class="weather-details">
+            <div class="weather-temp weather-box">
+                <%= weather.temp %>&deg;
+            </div>
+        </div>
+        <% } %>
+    </div>
+
+</body>
+
+</html>
